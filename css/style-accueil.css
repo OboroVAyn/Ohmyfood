@@ -12,7 +12,7 @@ a:visited{
     color: black;
 }
 .descriptif{
-    background-color: aqua;
+    background-color: rgb(238, 240, 240);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,12 +28,16 @@ a:visited{
     font-size: 28px;
 }
 .explo{
-    border: 2px solid black;
     border-radius: 20px;
-    padding: 4px;
+    padding: 2%;
     margin-top: 25px;
-    background-color: violet;
+    background: linear-gradient(#FF79DA, #9356dc);
     color: white;
+    box-shadow: 1px 1px 1px #5e5d5d;
+}
+.explo:hover{
+    opacity: calc(0.8);
+    box-shadow: 3px 3px 3px #5e5d5d;
 }
 #logo{
     display: block;
@@ -45,7 +49,7 @@ a:visited{
 .location{
     display: flex;
     justify-content: center;
-    background-color: gray;
+    background-color: rgb(224, 222, 222);
     padding: 2%;
 }
 #Fonction{
@@ -59,6 +63,7 @@ a:visited{
 .menu{
     border: 2px solid #f2f2f2;
     border-radius: 15px;
+    background-color: #f2f2f2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,6 +72,10 @@ a:visited{
     width: 80%;
     font-size: 21px;
     box-shadow: 3px 3px 3px #f2f2f2;
+}
+.menu:hover{
+    background:  #9356dc;
+    opacity: calc(0.8);
 }
 #mainblock2{
     background-color: #f2f2f2;

@@ -51,7 +51,7 @@ a{
 }
 .intitule{
     padding-bottom: 1%;
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid #99E2D0;
     margin-right: 92%;
 }
 .entree{
@@ -63,15 +63,39 @@ a{
     padding-right: 4px;
     box-shadow: 3px 3px 3px #f2f2f2;
     line-height: 1px;
+    animation: fadein 2s;
+}
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.expli{
+    display: flex;
+    flex-direction: column;
 }
 .espace{
     display: flex;
     justify-content: space-between;
 }
+.prix{
+    display: flex;
+    align-items: flex-end;
+}
+#hidden{
+    display: flex;
+    align-items: center;
+}
+.hidden{
+    background-color: #99E2D0;
+    color: white;
+}
 #commander{
     display: flex;
     justify-content: center;
-    border: 1px solid #f2f2f2;
     box-shadow: 3px 3px 3px #f2f2f2;
     margin-top: 50px;
     margin-left: auto;
@@ -80,8 +104,13 @@ a{
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
-    background-color: violet;
+    background: linear-gradient(#FF79DA, #9356dc);
     color: white;
+    box-shadow: 1px 1px 1px #5e5d5d;
+}
+#commander:hover{
+    opacity: calc(0.8);
+    box-shadow: 3px 3px 3px #5e5d5d;
 }
 #footer{
     display: flex;
