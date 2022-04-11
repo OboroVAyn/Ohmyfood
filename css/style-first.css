@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: Roboto;
+}
+a{
+    text-decoration: none;
+}
+.headertop{
+    display: flex;
+    align-items: center;
+}
+#logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+.diner{
+    width: 100%;
+}
+#position{
+    position: absolute;
+    width: 100%;
+    top: 300px;
+    left: 0;
+}
+#mainblock{
+    background-color: #f2f2f2;
+    border-radius: 40px 40px 0 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 50px;
+}
+#titre{
+    font-family: Shrikhand;
+}
+.titre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 32px;
+}
+#bloc1{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4%;
+    padding-left: 4%;
+}
+.intitule{
+    padding-bottom: 1%;
+    border-bottom: 2px solid green;
+    margin-right: 92%;
+}
+.entree{
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 15px;
+    margin: 12px 15px 0 0;
+    padding-left: 4px;
+    padding-right: 4px;
+    box-shadow: 3px 3px 3px #f2f2f2;
+    line-height: 1px;
+}
+.espace{
+    display: flex;
+    justify-content: space-between;
+}
+#commander{
+    display: flex;
+    justify-content: center;
+    border: 1px solid #f2f2f2;
+    box-shadow: 3px 3px 3px #f2f2f2;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+    background-color: violet;
+    color: white;
+}
+#footer{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    background-color: rgb(48, 44, 44);
+    width: 100%;
+    color: white;
+}
+#footer h3{
+    font-family: Shrikhand;
+}
+#footer div ul{
+    list-style: none;
+    padding-left: 0%;
+    line-height: 28px;
+}
+#footer a{
+    color: white;
+}
