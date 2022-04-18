@@ -55,15 +55,16 @@ a{
     margin-right: 92%;
 }
 .entree{
-    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
     background-color: white;
     border-radius: 15px;
     margin: 12px 15px 0 0;
     padding-left: 4px;
     padding-right: 4px;
     box-shadow: 3px 3px 3px #f2f2f2;
-    line-height: 1px;
     animation: fadein 2s;
+    overflow: hidden;
 }
 @keyframes fadein{
     from{
@@ -74,23 +75,36 @@ a{
     }
 }
 .expli{
-    display: flex;
-    flex-direction: column;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .espace{
     display: flex;
     justify-content: space-between;
 }
+.effet{
+    display: flex;
+}
 .prix{
     display: flex;
     align-items: flex-end;
+    margin-right: 12px;
+}
+.expli h3,.expli p{
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 #hidden{
     display: flex;
     align-items: center;
+    background-color: #99E2D0;
+    padding: 20px;
+    margin-right: -60px;
+}
+.entree:hover > .effet{
+    background-color: #FF79DA;
 }
 .hidden{
-    background-color: #99E2D0;
     color: white;
 }
 #commander{
