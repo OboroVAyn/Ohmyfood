@@ -43,11 +43,20 @@ a{
     align-items: center;
     font-size: 32px;
 }
-#bloc1{
+#bloc1, #bloc2, #bloc3{
     display: flex;
     flex-direction: column;
     padding-bottom: 4%;
     padding-left: 4%;
+}
+#bloc1{
+    animation: fadein 1s ease;
+}
+#bloc2{
+    animation: fadein 3s ease-out;
+}
+#bloc3{
+    animation: fadein 5s ease-in;
 }
 .intitule{
     padding-bottom: 1%;
@@ -83,7 +92,8 @@ a{
     justify-content: space-between;
 }
 .effet{
-    display: flex;
+    display: flex; 
+    transition:  900ms ease;
 }
 .prix{
     display: flex;
@@ -91,6 +101,7 @@ a{
     margin-right: 12px;
 }
 .expli h3,.expli p{
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
@@ -102,10 +113,15 @@ a{
     margin-right: -60px;
 }
 .entree:hover > .effet{
-    background-color: #FF79DA;
+    transform: translateX(-200px);
+}
+.entree:hover > .effet >#hidden > .hidden{
+    transform: rotate(360deg);
 }
 .hidden{
     color: white;
+    transition: 1s;
+    font-size: 25px;
 }
 #commander{
     display: flex;

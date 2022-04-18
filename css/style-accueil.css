@@ -129,7 +129,6 @@ a:visited{
 .boite div{
     line-height: 5px;
     padding-bottom: 2px;
-    overflow: hidden;
 }
 .coeur{
     display: flex;
@@ -140,20 +139,42 @@ a:visited{
 .expli{
     width: 100%;
 }
-.torrent{
-    font-size: 30px;
-    margin-right: 6%;
+.heath{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 35px;
     position: relative;
-    background-color: #FF79DA;
+    margin-right: 6%;
 }
-.torrent:active{
-    animation-name: essaie;
-    animation-duration: 4s;  
+.hike:hover{
+    animation: remplir 2s ease-in-out forwards;
 }
-@keyframes essaie{
-    0%{ color: red; left: 0px; background-color: red;}
-    50%{color: #9356dc; left: -50px; background-image: green;}
-    100%{color: red; left: 0px; background-image: red;}
+@keyframes remplir{
+    0%{
+        fill: transparent;
+    }
+    50%{
+        fill: var(#9356dc);
+        stroke: transparent;
+    }
+    100%{
+        fill: #9356dc;
+        stroke: transparent;
+    }
+}
+.hive{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+}
+svg{
+    width: 30px;
+    overflow: visible;
+}
+path{
+    transform-origin: center;
 }
 .boite img{
     width: 100%;
