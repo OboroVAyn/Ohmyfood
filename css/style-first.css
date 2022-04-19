@@ -50,13 +50,13 @@ a{
     padding-left: 4%;
 }
 #bloc1{
-    animation: fadein 1s ease;
+    animation: fadein 2s ease;
 }
 #bloc2{
-    animation: fadein 3s ease-out;
+    animation: fadein 4s ease;
 }
 #bloc3{
-    animation: fadein 5s ease-in;
+    animation: fadein 6s ease;
 }
 .intitule{
     padding-bottom: 1%;
@@ -72,24 +72,28 @@ a{
     padding-left: 4px;
     padding-right: 4px;
     box-shadow: 3px 3px 3px #f2f2f2;
-    animation: fadein 2s;
     overflow: hidden;
 }
 @keyframes fadein{
-    from{
+    0%{
         opacity: 0;
     }
-    to{
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
         opacity: 1;
     }
 }
 .expli{
     white-space: nowrap;
     overflow: hidden;
-}
-.espace{
-    display: flex;
-    justify-content: space-between;
 }
 .effet{
     display: flex; 
@@ -110,10 +114,10 @@ a{
     align-items: center;
     background-color: #99E2D0;
     padding: 20px;
-    margin-right: -60px;
+    margin-right: -70px;
 }
 .entree:hover > .effet{
-    transform: translateX(-200px);
+    transform: translateX(-65px);
 }
 .entree:hover > .effet >#hidden > .hidden{
     transform: rotate(360deg);

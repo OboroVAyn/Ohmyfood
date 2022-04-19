@@ -4,6 +4,70 @@
     box-sizing: border-box;
     font-family: Roboto;
 }
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: darkblue;
+    z-index: 1;
+    visibility: hidden;
+    animation: collapser 4s ease;
+}
+.loader-section.section-left svg{
+    width: 50%;
+    overflow: visible;
+} 
+.loader-section.section-left.spin{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    stroke: none;
+}
+.loader-section.section-left path{
+    stroke-dasharray: 1550;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: spinner 4s ease-in-out forwards;
+}
+.loader-section.section-left {
+    position: fixed;
+    left: 35%;
+    top: 45%;
+    fill: transparent;
+    stroke: #FF79DA;
+    stroke-width: 20px;
+}
+@keyframes spinner{
+    0%{
+        stroke-dashoffset: 0%;
+        transform: rotate(0);
+    }
+    30%{
+        stroke-dashoffset: 1550;
+        transform: rotate(90deg);
+    }
+    60%{
+        stroke-dashoffset: 3100;
+        transform: rotate(145deg);
+    }
+}
+@keyframes collapser{
+    0%{
+        visibility: visible;
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.8;
+    }
+    100%{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
 a{
     text-decoration: none;
     color: white;
@@ -39,11 +103,11 @@ a:visited{
     margin-top: 25px;
     background: linear-gradient(#FF79DA, #9356dc);
     color: white;
-    box-shadow: 1px 1px 1px #5e5d5d;
+    box-shadow: 1px 1px 1px #aaaaaa;
 }
 .explo:hover{
     opacity: calc(0.8);
-    box-shadow: 3px 3px 3px #5e5d5d;
+    box-shadow: 3px 3px 3px #aaaaaa;
 }
 #logo{
     display: block;
@@ -65,9 +129,9 @@ a:visited{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 10%;
 }
 .menu{
-    border: 2px solid #f2f2f2;
     border-radius: 15px;
     background-color: #f2f2f2;
     display: flex;
@@ -77,14 +141,27 @@ a:visited{
     padding: 15px;
     width: 80%;
     font-size: 21px;
-    box-shadow: 3px 3px 3px #f2f2f2;
+    box-shadow: 3px 3px 3px #aaaaaa;
 }
 .menu:hover{
-    background:  #9356dc;
-    opacity: calc(0.8);
+    background:  #dacceb;
 }
 .menu:hover >.store{
-    color: #FF79DA;
+    color: #9356dc;
+}
+.mune{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+.number{
+    position: absolute;
+    background-color: #9356dc;
+    color: #fff;
+    margin-top: 25px;
+    left: 5px;
+    padding: 2px 7px 2px 7px;
+    border-radius: 50px;
 }
 .store{
     margin-right: 25px;
@@ -110,7 +187,7 @@ a:visited{
     border-radius: 20px;
     margin: 2%;
     margin-left: 4%;
-    box-shadow: 3px 3px 3px 3px brown;
+    box-shadow: 3px 3px 3px 3px #aaaaaa;
 }
 .picture{
     position: relative;
@@ -169,7 +246,7 @@ a:visited{
     z-index: -1;
     stroke: none;
 }
-svg{
+.heath svg{
     width: 30px;
     overflow: visible;
 }
