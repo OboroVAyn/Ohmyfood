@@ -6,6 +6,7 @@
 }
 a{
     text-decoration: none;
+    color: black;
 }
 .headertop{
     display: flex;
@@ -16,6 +17,9 @@ a{
     margin-left: auto;
     margin-right: auto;
     width: 40%;
+}
+.ray{
+    font-size: 35px;
 }
 .diner{
     width: 100%;
@@ -97,7 +101,6 @@ a{
 }
 .effet{
     display: flex; 
-    transition:  900ms ease;
 }
 .prix{
     display: flex;
@@ -109,29 +112,37 @@ a{
     overflow: hidden;
     text-overflow: ellipsis;
 }
-#hidden{
+.hidden{
     display: flex;
     align-items: center;
     background-color: #99E2D0;
     padding: 20px;
+    padding-left: 40px;
     margin-right: -70px;
+    transition: 1s;
+    width: 4rem;
 }
-.entree:hover > .effet{
-    transform: translateX(-65px);
+.entree:active > .effet >.hidden{
+    width: 12rem;
 }
-.entree:hover > .effet >#hidden > .hidden{
+.entree:active > .effet >.hidden > .rotation{
     transform: rotate(360deg);
 }
-.hidden{
+.rotation{
     color: white;
     transition: 1s;
     font-size: 25px;
 }
-#commander{
+.commander{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+#commander-btn{
     display: flex;
     justify-content: center;
     box-shadow: 3px 3px 3px #f2f2f2;
-    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     padding: 6px;
@@ -142,7 +153,7 @@ a{
     color: white;
     box-shadow: 1px 1px 1px #5e5d5d;
 }
-#commander:hover{
+#commander-btn:hover{
     opacity: calc(0.8);
     box-shadow: 3px 3px 3px #5e5d5d;
 }
@@ -164,4 +175,35 @@ a{
 }
 #footer a{
     color: white;
+}
+.fork{
+    margin-right: 1%;
+}
+@media screen and (max-width:992px) and (min-width:768px){
+    .intitule{
+        padding-left: 45%;
+        margin-left: 0;
+        margin-right: 4%;
+    }
+    #footer{
+        flex-direction: row-reverse;
+    }
+}
+@media screen and (min-width:992px){
+    .intitule{
+        width: 50%;
+    }
+    .titre,.entree{
+        width: 80%;
+    }
+    .entree:hover > .effet >.hidden{
+        width: 12rem;
+    }
+    .entree:hover > .effet >.hidden > .rotation{
+        transform: rotate(360deg);
+    }
+    #footer{
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
