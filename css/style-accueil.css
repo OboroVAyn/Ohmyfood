@@ -116,7 +116,7 @@ a:visited{
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    padding-bottom: 1%;
+    padding-bottom: 4%;
 }
 .location{
     display: flex;
@@ -285,6 +285,9 @@ path{
     margin-right: 1%;
 }
 @media screen and (max-width:992px) and (min-width:768px) {
+    .loader-section.section-left{
+        left: 45%;
+    }
     #mainblock1{
         width: 50%;
     }
@@ -296,6 +299,9 @@ path{
     }
 }
 @media screen and (min-width:992px) {
+    .loader-section.section-left{
+        left: 50%;
+    }
     #Fonction{
         padding-left: 45%;
     }

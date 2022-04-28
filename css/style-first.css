@@ -23,11 +23,13 @@ a{
 }
 .diner{
     width: 100%;
+    position: absolute;
+    left: 0;
 }
 #position{
     position: absolute;
     width: 100%;
-    top: 300px;
+    top: 265px;
     left: 0;
 }
 #mainblock{
@@ -40,12 +42,43 @@ a{
 }
 #titre{
     font-family: Shrikhand;
+    font-size: 30px;
 }
 .titre{
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-size: 32px;
+}
+.heath{
+    fill: transparent;
+    stroke: black;
+    stroke-width: 35px;
+    position: relative;
+    margin-right: 6%;
+}
+.hike:active{
+    animation: remplir 2s ease-in-out forwards;
+}
+@keyframes remplir{
+    0%{
+        fill: transparent;
+    }
+    50%{
+        fill: #9356dc;
+        stroke: transparent;
+    }
+    100%{
+        fill: #9356dc;
+        stroke: transparent;
+    }
+}
+.heath svg{
+    width: 30px;
+    overflow: visible;
+}
+path{
+    transform-origin: center;
 }
 #bloc1, #bloc2, #bloc3{
     display: flex;
@@ -105,7 +138,7 @@ a{
 .prix{
     display: flex;
     align-items: flex-end;
-    margin-right: 12px;
+    margin-right: 52px;
 }
 .expli h3,.expli p{
     white-space: nowrap;
@@ -117,13 +150,14 @@ a{
     align-items: center;
     background-color: #99E2D0;
     padding: 20px;
-    padding-left: 40px;
+    padding-left: 20px;
     margin-right: -70px;
+    margin-left: -20px;
     transition: 1s;
-    width: 4rem;
+    width: 2rem;
 }
 .entree:active > .effet >.hidden{
-    width: 12rem;
+    width: 8rem;
 }
 .entree:active > .effet >.hidden > .rotation{
     transform: rotate(360deg);
@@ -192,6 +226,9 @@ a{
 @media screen and (min-width:992px){
     .intitule{
         width: 50%;
+    }
+    .hike:hover{
+        animation: remplir 2s ease-in-out forwards;
     }
     .titre,.entree{
         width: 80%;
