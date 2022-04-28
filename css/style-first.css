@@ -233,7 +233,7 @@ path{
         width: 80%;
     }
     .entree:hover > .effet >.hidden{
-        width: 12rem;
+        width: 8rem;
     }
     .entree:hover > .effet >.hidden > .rotation{
         transform: rotate(360deg);
