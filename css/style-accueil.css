@@ -75,6 +75,11 @@ a{
 a:visited{
     color: black;
 }
+header{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 .descriptif{
     background-color: rgb(238, 240, 240);
     display: flex;
@@ -172,6 +177,12 @@ a:visited{
 .store{
     margin-right: 25px;
     color: #afafaa;
+}
+#position{
+    position: absolute;
+    width: 100%;
+    top: 42%;
+    left: 0;
 }
 #mainblock2{
     background-color: #f2f2f2;
@@ -288,6 +299,9 @@ path{
     .loader-section.section-left{
         left: 45%;
     }
+    #position{
+        top: 45%;
+    }
     #mainblock1{
         width: 50%;
     }
@@ -301,6 +315,9 @@ path{
 @media screen and (min-width:992px) {
     .loader-section.section-left{
         left: 50%;
+    }
+    #position{
+        top: 55%;
     }
     #Fonction{
         padding-left: 45%;
